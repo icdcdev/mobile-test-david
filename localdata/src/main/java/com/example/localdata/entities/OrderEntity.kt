@@ -17,7 +17,7 @@ data class OrderEntity(
     var pyramidNumber: Int?,
     var orderStatusId: Int?,
     var orderStatus: String?,
-    var isAsigned: Boolean,
+    var isAssigned: Boolean,
     var hasFile: Boolean,
     var urlFile: String?
 )

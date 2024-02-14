@@ -17,10 +17,10 @@ interface OrderDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrder(comic: List<OrderEntity>)
 
-    @Query("SELECT * FROM order ")
-    fun getOrders(): Flow<List<OrderEntity>>
+    @Query("SELECT * FROM `order` WHERE isAssigned= :isAssigned")
+    fun getOrders(isAssigned: Boolean): Flow<List<OrderEntity>>
 
-    @Query("DELETE FROM order")
+    @Query("DELETE FROM `order`")
     suspend fun clearAll()
 
 }

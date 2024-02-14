@@ -20,6 +20,6 @@ object DatabaseModule {
     ): AdsDatabase = Room.databaseBuilder(
         context,
         AdsDatabase::class.java,
-        "marvel-database",
+        "ads-database",
     ).fallbackToDestructiveMigration().build()
 }
