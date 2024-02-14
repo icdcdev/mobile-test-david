@@ -1,6 +1,8 @@
 package com.example.remotedata.di
 
 import com.example.remotedata.api.VolksWagenApi
+import com.example.remotedata.orders.OrderRemoteDataSource
+import com.example.remotedata.orders.OrderRemoteDataSourceImple
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.adapters.Rfc3339DateJsonAdapter
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -34,5 +36,15 @@ class RemoteModule {
             .addConverterFactory(MoshiConverterFactory.create(moshi))
             .build()
             .create(VolksWagenApi::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideOrderRemoteDataSource(
+        volksWagenApi: VolksWagenApi
+    ): OrderRemoteDataSource {
+        return OrderRemoteDataSourceImple(
+            volksWagenApi
+        )
     }
 }
