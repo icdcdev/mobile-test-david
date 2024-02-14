@@ -17,3 +17,5 @@ rootProject.name = "EcdcChallange"
 include(":app")
 include(":remotedata")
 include(":localdata")
+include(":domain")
+include(":models")
