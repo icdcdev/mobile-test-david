@@ -41,6 +41,7 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.42")
     implementation("androidx.paging:paging-runtime-ktx:3.1.1")
     implementation(project(":remotedata"))
+    implementation(project(":models"))
     implementation(project(":localdata"))
     testImplementation("io.mockk:mockk:1.12.2")
     testImplementation("junit:junit:4.13.2")
