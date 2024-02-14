@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "EcdcChallange"
 include(":app")
+include(":remotedata")
