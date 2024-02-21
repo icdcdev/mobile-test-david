@@ -20,6 +20,9 @@ interface OrderDao {
     @Query("SELECT * FROM `order` WHERE isAssigned= :isAssigned")
     fun getOrders(isAssigned: Boolean): Flow<List<OrderEntity>>
 
+    @Query("UPDATE `order` SET isAssigned = :isAssigned WHERE orderId= :orderId")
+    fun updateOrder(orderId: String, isAssigned: Boolean): Long
+
     @Query("DELETE FROM `order`")
     suspend fun clearAll()
 

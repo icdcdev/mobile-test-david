@@ -13,5 +13,4 @@ class GetAllOrderUseCase @Inject constructor(private val orderRepository: OrderR
     IGetAllOrderUseCase {
     override fun invoke(isAssigned: Boolean): Flow<List<Order>> =
         orderRepository.getAllOrdersRepository(isAssigned = isAssigned)
-
 }
