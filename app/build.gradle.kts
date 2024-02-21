@@ -52,6 +52,8 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation(project(":models"))
+    implementation(project(":domain"))
     kapt("com.google.dagger:hilt-compiler:2.42")
     implementation("com.google.dagger:hilt-android:2.42")
     testImplementation("junit:junit:4.13.2")
