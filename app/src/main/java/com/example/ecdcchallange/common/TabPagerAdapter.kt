@@ -1,8 +1,10 @@
-package com.example.ecdcchallange
+package com.example.ecdcchallange.common
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.ecdcchallange.orders.AllOrderFragment
+import com.example.ecdcchallange.orders.AssignedOrderFragment
 
 class TabPagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapter(fragmentActivity) {
     override fun getItemCount(): Int = 2
